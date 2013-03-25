@@ -43,3 +43,10 @@ if [ $? -ne 0 ]; then
     echo "autogen.sh: error: autoreconf exited with status $?" 1>&2
     exit 1
 fi
+
+# Patching libtool to recognize x86-64 shared libraries
+echo Patching libtool for x86-64
+# grep doesn't support non-capturing groups, and without refactoring
+# the code more, this works.  Would prefer (?:i386|x86-64)
+sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' -i config/libtool.m4 -i.bak
+sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' -i config/ltmain.sh -i.bak

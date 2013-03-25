@@ -13,19 +13,18 @@ noinst_PROGRAMS = test_pair_inproc \
                   test_invalid_rep \
                   test_msg_flags \
                   test_connect_resolve \
-                  test_connect_delay \
                   test_last_endpoint \
                   test_term_endpoint \
-                  test_monitor \
-                  test_router_mandatory \
-                  test_disconnect_inproc
-
+                  test_router_mandatory
 
 if !ON_MINGW
 noinst_PROGRAMS += test_shutdown_stress \
                    test_pair_ipc \
                    test_reqrep_ipc \
-                   test_timeo
+                   test_timeo \
+                   test_connect_delay \
+                   test_monitor \
+                   test_disconnect_inproc
 endif
 
 test_pair_inproc_SOURCES = test_pair_inproc.cpp testutil.hpp
