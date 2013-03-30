@@ -48,5 +48,5 @@ fi
 echo Patching libtool for x86-64
 # grep doesn't support non-capturing groups, and without refactoring
 # the code more, this works.  Would prefer (?:i386|x86-64)
-test -f config/libtool.mr && sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' config/libtool.m4
-test -f config/ltmain.sh && sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' config/ltmain.sh
+test -f config/libtool.mr && sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' -i config/libtool.m4
+test -f config/ltmain.sh && sed -re 's/pe(i\*)?-i386/pe\1-[ix].?86/' -i config/ltmain.sh
