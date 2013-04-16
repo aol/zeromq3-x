@@ -37,11 +37,8 @@ test_sub_forward_SOURCES = test_sub_forward.cpp
 test_invalid_rep_SOURCES = test_invalid_rep.cpp
 test_msg_flags_SOURCES = test_msg_flags.cpp
 test_connect_resolve_SOURCES = test_connect_resolve.cpp
-test_connect_delay_SOURCES = test_connect_delay.cpp
 test_last_endpoint_SOURCES = test_last_endpoint.cpp
 test_term_endpoint_SOURCES = test_term_endpoint.cpp
-test_monitor_SOURCES = test_monitor.cpp
-test_disconnect_inproc_SOURCES = test_disconnect_inproc.cpp
 test_router_mandatory_SOURCES = test_router_mandatory.cpp
 
 if !ON_MINGW
@@ -49,6 +46,9 @@ test_shutdown_stress_SOURCES = test_shutdown_stress.cpp
 test_pair_ipc_SOURCES = test_pair_ipc.cpp testutil.hpp
 test_reqrep_ipc_SOURCES = test_reqrep_ipc.cpp testutil.hpp
 test_timeo_SOURCES = test_timeo.cpp
+test_connect_delay_SOURCES = test_connect_delay.cpp
+test_monitor_SOURCES = test_monitor.cpp
+test_disconnect_inproc_SOURCES = test_disconnect_inproc.cpp
 endif
 
 TESTS = $(noinst_PROGRAMS)
